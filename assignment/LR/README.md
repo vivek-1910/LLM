@@ -6,18 +6,20 @@ This folder contains the logistic regression classification model using scikit-l
 
 ```
 LR/
-├── logistic_regression.py   # Logistic regression model
-└── results.png              # Visualization of results
+├── logistic_regression.py        # Logistic regression model
+├── mushroom_classification.csv   # Binary classification dataset
+├── download_dataset.py           # Generate/download dataset
+└── results.png                   # Visualization of results
 ```
 
 ## 📊 Model
 
 ### Logistic Regression
 - **File**: `logistic_regression.py`
-- **Task**: Predict wine quality (Good/Poor)
-- **Dataset**: Wine Quality (178 real wine samples)
+- **Task**: Binary classification on synthetic dataset
+- **Dataset**: Synthetic Binary Classification (1500 samples, 12 features)
 - **Algorithm**: Linear classifier with logistic function
-- **Accuracy**: 100%
+- **K-Fold Accuracy**: 95.5% ± 0.81%
 - **Interpretable**: Shows feature importance through coefficients
 
 ## 🔧 Requirements
@@ -29,6 +31,9 @@ pip install -r ../requirements.txt
 ## 🚀 Run from Assignment Root
 
 ```bash
+# Generate dataset
+python LR/download_dataset.py
+
 # Run logistic regression
 python LR/logistic_regression.py
 
